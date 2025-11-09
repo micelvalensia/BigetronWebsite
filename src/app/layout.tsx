@@ -17,7 +17,7 @@ const fontAnton = Anton({
   variable: "--font-anton",
   subsets: ["latin"],
   weight: ["400"]
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,9 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${fontAnton.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${fontAnton.variable} antialiased min-h-screen`}
+        style={{ minHeight: '100vh' }}
       >
         <Navbar />
         <div className="md:pt-38">

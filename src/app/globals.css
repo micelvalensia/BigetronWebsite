@@ -20,14 +20,45 @@
   }
 }
 
-html{
+html {
   scroll-behavior: smooth;
+  /* Fix untuk mobile browser address bar */
+  height: 100%;
+  overflow-x: hidden;
+  /* Custom viewport height property */
+  --vh: 1vh;
 }
 
 body {
   background: #242424;
   color: var(--foreground);
+  
+  /* Perbaikan untuk iOS Safari smooth scrolling */
   -webkit-overflow-scrolling: touch;
+  
+  /* Fix untuk address bar jump - gunakan custom property */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: calc(var(--vh, 1vh) * 100);
+  
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  width: 100%;
+  
+  /* Better text rendering on mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Fix untuk layout shift */
+  position: relative;
+}
+
+/* Fix untuk address bar di mobile */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* iOS Safari specific fix */
+    min-height: -webkit-fill-available;
+  }
 }
 
 .custom-clip {
