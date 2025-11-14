@@ -9,12 +9,12 @@ export default function Division() {
   const dragRef = useRef<HTMLDivElement>(null);
 
   const cards = [
-    { id: 0, title: "FINN", image: "/assets/mobilelegends.jpg", hoverImage: "/assets/fin.png" },
-    { id: 1, title: "EMANN", image: "/assets/mobilelegends.jpg", hoverImage: "/assets/mobile.png" },
-    { id: 2, title: "MORENO", image: "/assets/mobilelegends.jpg", hoverImage: "/assets/moreno.png" },
-    { id: 3, title: "NNAEL", image: "/assets/mobilelegends.jpg", hoverImage: "/assets/nael.png" },
-    { id: 4, title: "SHOGUN", image: "/assets/mobilelegends.jpg", hoverImage: "/assets/shogun.png" },
-    { id: 5, title: "RONN", image: "/assets/mobilelegends.jpg", hoverImage: "/assets/ron.png" },
+    { id: 0, title: "FINN", image: "/assets/badang.jpg", hoverImage: "/assets/fin.png" },
+    { id: 1, title: "EMANN", image: "/assets/chou.jpg", hoverImage: "/assets/mobile.png" },
+    { id: 2, title: "MORENO", image: "/assets/valentina.jpg", hoverImage: "/assets/moreno.png" },
+    { id: 3, title: "NNAEL", image: "/assets/lancelot.jpg", hoverImage: "/assets/nael.png" },
+    { id: 4, title: "SHOGUN", image: "/assets/yuzong.jpg", hoverImage: "/assets/shogun.png" },
+    { id: 5, title: "RONN", image: "/assets/fanny.jpg", hoverImage: "/assets/ron.png" },
   ];
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
@@ -68,7 +68,7 @@ export default function Division() {
         <div className="text-center flex gap-8 items-center text-white font-anton tracking-widest relative z-10">
           <div className="w-full h-1 border-white"></div>
           <span className="text-5xl md:text-7xl tracking-widest">
-            DIVISIONS
+            Members
           </span>
           <div className="w-full h-1 border-white"></div>
         </div>
@@ -127,7 +127,6 @@ export default function Division() {
                           isActive={isActive}
                         />
                       ) : (
-                        // Placeholder untuk kartu samping
                         <div className="w-full h-full bg-[#212121] flex items-center justify-center top-0">
                           <span className="text-white/50 text-sm font-bold">{card.title}</span>
                         </div>

@@ -75,7 +75,7 @@ export default function MLCard({
           <div className={`absolute inset-0 flex items-center justify-center pb-8 transition-opacity duration-500 ${
             isActive && isHovered ? 'opacity-0' : 'opacity-100'
           }`}>
-            <h2 className="text-white text-2xl md:text-4xl font-black tracking-wider drop-shadow-2xl text-center px-4">
+            <h2 className="text-white text-2xl md:text-4xl font-black tracking-wider drop-shadow-2xl text-center px-4 font-anton">
               {title}
             </h2>
           </div>
