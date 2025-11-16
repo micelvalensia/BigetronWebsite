@@ -4,18 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import LogoNav from "@/components/SVG/LogoNav";
 import Link from "next/link";
 import { backdropVariants, circleVariants, closeButtonVariants, contentVariants, footerVariants, navContainerVariants, navItemVariants } from "./variants";
+import { navItemsMobile } from "../navdata";
 
 export default function Mobile() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const navItems = [
-    { label: "TEAMS", to: "/teams" },
-    { label: "ABOUT", to: "/" },
-    { label: "NEWS & EVENTS", to: "/" },
-    { label: "MATCHES", to: "/" },
-    { label: "SPONSORS", to: "/" },
-    { label: "CONTACT", to: "/" }
-  ];
+
 
   useEffect(() => {
     if (isNavOpen) {
@@ -100,7 +94,7 @@ export default function Mobile() {
                   initial="hidden"
                   animate="visible"
                 >
-                  {navItems.map((item, i) => (
+                  {navItemsMobile.map((item, i) => (
                     <motion.li
                       key={i}
                       variants={navItemVariants}

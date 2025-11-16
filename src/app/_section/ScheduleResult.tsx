@@ -9,7 +9,7 @@ import { dataResult, dataUpcoming } from "@/components/data/data";
 export function ScheduleResult() {
   const [active, setActive] = useState<string>("upcoming");
   return (
-    <div className="py-10 px-4 bg-[#212121] min-h-screen flex flex-col items-center">
+    <div className="py-10 px-4 min-h-screen flex flex-col items-center">
       {/* Header */}
       <div className="text-center flex flex-col gap-8 items-center justify-center text-white font-anton tracking-widest relative z-10 mb-8">
         <span className="text-3xl md:text-6xl tracking-wider">
@@ -50,7 +50,7 @@ export function ScheduleResult() {
               <motion.div
                 key={`upcoming-${data.enemy}-${i}`}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{
                   duration: 0.4,
@@ -66,7 +66,7 @@ export function ScheduleResult() {
               <motion.div
                 key={`result-${data.enemy}-${i}`}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{
                   duration: 0.4,

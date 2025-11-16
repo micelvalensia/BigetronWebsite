@@ -1,21 +1,13 @@
 "use client"
 import { useState, useRef } from "react";
 import MLCard from "@/components/Division/Card";
+import { members } from "@/components/data/data";
 
-export default function Division() {
+export default function Members() {
   const [activeIndex, setActiveIndex] = useState(1); 
   const [dragStart, setDragStart] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const dragRef = useRef<HTMLDivElement>(null);
-
-  const cards = [
-    { id: 0, title: "FINN", image: "/assets/badang.jpg", hoverImage: "/assets/fin.png" },
-    { id: 1, title: "EMANN", image: "/assets/chou.jpg", hoverImage: "/assets/mobile.png" },
-    { id: 2, title: "MORENO", image: "/assets/valentina.jpg", hoverImage: "/assets/moreno.png" },
-    { id: 3, title: "NNAEL", image: "/assets/lancelot.jpg", hoverImage: "/assets/nael.png" },
-    { id: 4, title: "SHOGUN", image: "/assets/yuzong.jpg", hoverImage: "/assets/shogun.png" },
-    { id: 5, title: "RONN", image: "/assets/fanny.jpg", hoverImage: "/assets/ron.png" },
-  ];
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true);
@@ -33,10 +25,10 @@ export default function Division() {
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
         // Swipe ke kanan - geser ke kiri (prev) dengan infinite loop
-        setActiveIndex(prev => prev === 0 ? cards.length - 1 : prev - 1);
+        setActiveIndex(prev => prev === 0 ? members.length - 1 : prev - 1);
       } else {
         // Swipe ke kiri - geser ke kanan (next) dengan infinite loop
-        setActiveIndex(prev => prev === cards.length - 1 ? 0 : prev + 1);
+        setActiveIndex(prev => prev === members.length - 1 ? 0 : prev + 1);
       }
     }
     
@@ -98,14 +90,14 @@ export default function Division() {
                 onTouchStart={handleDragStart}
                 onTouchEnd={handleDragEnd}
               >
-                {cards.map((card, index) => {
+                {members.map((card, index) => {
                   const isActive = index === activeIndex;
                   let diff = index - activeIndex;
 
-                   if (diff > cards.length / 2) {
-                    diff -= cards.length;
-                  } else if (diff < -cards.length / 2) {
-                    diff += cards.length;
+                   if (diff > members.length / 2) {
+                    diff -= members.length;
+                  } else if (diff < -members.length / 2) {
+                    diff += members.length;
                   }
                   const isVisible = Math.abs(diff) <= 1;
                   

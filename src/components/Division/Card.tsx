@@ -60,7 +60,7 @@ export default function MLCard({
         >
           <Image
             alt={title}
-            src={image}
+            src={`/assets/members-hero${image}`}
             fill
             className={`object-cover transition-all duration-500 ${
               isActive && isHovered ? 'grayscale-0' : 'grayscale'
@@ -91,7 +91,7 @@ export default function MLCard({
           >
             <Image
               alt={title}
-              src={hoverImage}
+              src={`/assets/members-hero${hoverImage}`}
               width={200}
               height={200}
               className="object-contain scale-150"

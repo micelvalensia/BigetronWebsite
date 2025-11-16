@@ -63,7 +63,7 @@ export default function HeroSection() {
 
         {/* Desktop Subtitle */}
         <motion.div 
-          className="hidden absolute left-1/2 -translate-x-1/2 top-[55%] w-[40em] md:flex justify-between font-anton text-4xl tracking-widest"
+          className="hidden absolute left-1/2 -translate-x-1/2 top-[55%] w-[45em] md:flex justify-between font-anton text-4xl tracking-widest"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ 
@@ -84,7 +84,7 @@ export default function HeroSection() {
             BY VITALITY
           </motion.span>
           <motion.div 
-            className="flex flex-col ml-44"
+            className="flex flex-col"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ 
@@ -100,7 +100,7 @@ export default function HeroSection() {
 
         {/* Hero Image */}
         <motion.div 
-          className="absolute left-1/2 -translate-x-1/2 top-1/2 md:top-0 w-[120vw] md:w-[50vw]"
+          className="absolute left-1/2 -translate-x-1/2 top-[46%] md:bottom-0 md:top-auto w-[120vw] md:w-[50vw]"
           initial={{ opacity: 0, scale: 0.8, y: 100 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ 
