@@ -21,7 +21,7 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: true }}
-          className="md:w-[10%] h-32 md:h-full relative"
+          className="md:w-[10%] h-32 md:h-32 relative"
         >
           <Image 
             alt="logofooter" 
