@@ -44,7 +44,7 @@ export function ScheduleResult() {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl w-full gap-4 md:gap-6 overflow-auto max-h-[65vh]">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {active === "upcoming" &&
             dataUpcoming.map((data, i) => (
               <motion.div

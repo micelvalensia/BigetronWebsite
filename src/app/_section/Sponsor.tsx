@@ -26,7 +26,7 @@ export function SponsorComp() {
         <div className="flex flex-wrap gap-6 md:gap-8 items-center justify-center">
           <AnimatePresence>
             {sponsors.map((data, i) => (
-              <motion.div key={i} initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.3, ease: "easeInOut", delay: 0.2 * i}} viewport={{once: true}}>
+              <motion.div key={i} initial={{y: 20, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{duration: 0.1, ease: "easeInOut", delay: 0.2 * i}} viewport={{once: true}}>
                 <SponsorCard data={data} />
               </motion.div>
             ))}

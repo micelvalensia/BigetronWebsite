@@ -22,10 +22,13 @@ const fontAnton = Anton({
 export const metadata: Metadata = {
   title: "BIGETRON ALPHA",
   description: "BIGETRON ALPHA MY GOATTT",
-  icons: {
-    icon: "/logo.png"
-  }
+  icons: [
+    { rel: "icon", url: "/logo.png" },
+    { rel: "shortcut icon", url: "/logo.png" },
+    { rel: "apple-touch-icon", url: "/logo.png" }
+  ]
 };
+
 
 export default function RootLayout({
   children,

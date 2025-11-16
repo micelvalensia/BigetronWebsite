@@ -7,15 +7,15 @@ export function Desktop() {
     <>
       <div className="w-full max-w-8xl flex items-center shadow-xl justify-between px-16 py-4">
         <div className="flex items-center gap-5">
-          <span>Lorem Ipsum</span>
-          <div className="w-5 h-5 rounded-full bg-neutral-600" />
-          <div className="w-5 h-5 rounded-full bg-neutral-600" />
-          <div className="w-5 h-5 rounded-full bg-neutral-600" />
-          <div className="w-5 h-5 rounded-full bg-neutral-600" />
+          <span>Bigetron</span>
+          <div className="w-5 h-5 rounded-full bg-red-600" />
+          <div className="w-5 h-5 rounded-full bg-red-600" />
+          <div className="w-5 h-5 rounded-full bg-red-600" />
+          <div className="w-5 h-5 rounded-full bg-red-600" />
         </div>
-        <div className="flex gap-5">
-          <div className="w-5 h-5 rounded-full bg-neutral-600" />
-          <span>Lorem Ipsum</span>
+        <div className="flex gap-5 items-center">
+          <div className="w-5 h-5 rounded-full bg-red-600" />
+          <span>hiasan</span>
         </div>
       </div>
 

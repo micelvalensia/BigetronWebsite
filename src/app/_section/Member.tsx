@@ -57,7 +57,7 @@ export default function Members() {
       <div className="w-full absolute top-0 left-0 bg-[linear-gradient(to_top,rgba(0,0,0,0)_0%,rgba(0,0,0,0.8)_100%)] h-[40%] z-0"></div>
       
       <div className="flex flex-col min-h-[80vh] md:min-h-[90dvh]">
-        <div className="text-center flex gap-8 items-center text-white font-anton tracking-widest relative z-10">
+        <div className="text-center flex gap-8 items-center text-white mb-10 font-anton tracking-widest relative z-10">
           <div className="w-full h-1 border-white"></div>
           <span className="text-5xl md:text-7xl tracking-widest">
             Members
@@ -65,7 +65,7 @@ export default function Members() {
           <div className="w-full h-1 border-white"></div>
         </div>
 
-        <div className="mt-10 flex items-end justify-center overflow-hidden flex-1">
+        <div className="border-2 flex items-end justify-center overflow-hidden flex-1">
           <div className="max-w-5xl w-5xl relative">
             <div className="w-[200%] h-[450px] md:w-full md:h-[450px] [background:radial-gradient(at_58%,#730903,#410500)] border-t-30 border-r-30 border-l-30 border-black right-[50%] md:right-0 rounded-tl-full rounded-tr-full relative">
               
